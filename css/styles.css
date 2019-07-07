@@ -1,0 +1,76 @@
+/*Your styles*/
+
+ body {
+    margin: 10px;
+}
+
+
+#content {
+    margin-right:auto;
+    margin-left:auto;
+    vertical-align:middle;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.inputBox{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.outputBox{
+    width: 50%;
+}
+
+input{
+    width: 200px;
+    padding: 7px 3px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+span{
+    color: white;
+    font-size: 16px;
+}
+
+#btnSwitch{
+    padding: 20px 15pxpx;
+    width: 100px;
+}
+
+
+
+
+/*
+Those classes will be edited at runtime with values specified
+by the settings of the CC application
+*/
+.hostFontColor{}
+.hostFontFamily{}
+.hostFontSize{}
+
+/*font family, color and size*/
+.hostFont{}
+/*background color*/
+.hostBgd{}
+/*lighter background color*/
+.hostBgdLight{}
+/*darker background color*/
+.hostBgdDark{}
+/*background color and font*/
+.hostElt{}
+
+
+.hostButton{
+    border:1px solid;
+    border-radius:2px;
+    height:20px;
+    vertical-align:bottom;
+    font-family:inherit;
+    color:inherit;
+    font-size:inherit;
+}
