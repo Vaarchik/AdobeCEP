@@ -1,6 +1,4 @@
 var $switchButton = $('#btnSwitch');
-var $stopButton = $('.stop');
-var $watchButton = $('.watch');
 var $blockLog = $('#logBlock');
 var timerId;
 var dataCurrent = '';
