@@ -3,23 +3,21 @@ var $stopButton = $('.stop');
 var $watchButton = $('.watch');
 var $blockLog = $('#logBlock');
 var timerId;
-var classChecked = $switchButton.className;
 var dataCurrent = '';
 
 $switchButton.click(function(){
     if( $(this).hasClass('stop') ){
-        $switchButton.toggleClass('stop');
-        $switchButton.toggleClass('watch');
+        $(this).toggleClass('stop');
+        $(this).toggleClass('watch');
         stopLoadData();
-        $(this).text('Stop');
-        $switchButton.text('Watch');
+        $(this).text('Watch');
     } else {
-        $switchButton.toggleClass('stop');
-        $switchButton.toggleClass('watch');
+        $(this).toggleClass('stop');
+        $(this).toggleClass('watch');
         var StorageTimerInterval = $('#intervalBlock').val();
         loadData();
         timerId = setInterval(loadData, StorageTimerInterval);
-        $switchButton.text('Stop');
+        $(this).text('Stop');
     }
 });
 
@@ -28,7 +26,8 @@ function loadData(){
     $.ajax({
         url: StorageAdress,
         dataType: 'json',
-        success: function (data) {
+        crossDomain: true,
+        success: function (data, textStatus, jqXHR) {
             dataNew = JSON.stringify(data);
             if (dataCurrent !== dataNew){
                 $blockLog.text(dataNew);
